@@ -29,10 +29,10 @@ Testcase.mt.__call = function(table, index)
     table[table.step[index]]()
 end
 
-function Testcase:new(table)
+function Testcase:new(t)
     local testcase = {}
     setmetatable(testcase, self.mt)
-    table.insert(table, testcase)
+    table.insert(t, testcase)
     return testcase
 end
 
